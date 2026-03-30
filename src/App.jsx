@@ -6,7 +6,7 @@ function App() {
   const [typingText, setTypingText] = useState('');
   const [activeNav, setActiveNav] = useState('hero');
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
-  
+
   // Refs for logic
   const cursorDotRef = useRef(null);
   const cursorRingRef = useRef(null);
@@ -14,7 +14,7 @@ function App() {
   const timelineLineRef = useRef(null);
 
   // ═══════════════════════════════════
-  // LOADER
+  // LOADER //
   // ═══════════════════════════════════
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 1500);
@@ -278,7 +278,7 @@ function App() {
   // ═══════════════════════════════════
   useEffect(() => {
     const tiltElements = document.querySelectorAll('#tilt-card, .project-card, .stat-card');
-    
+
     const handleMouseMove = (e, card) => {
       const rect = card.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
@@ -342,7 +342,7 @@ function App() {
     const nameEl = document.getElementById('f-name');
     const emailEl = document.getElementById('f-email');
     const msgEl = document.getElementById('f-msg');
-    
+
     if (!nameEl || !emailEl || !msgEl) return;
 
     const name = nameEl.value.trim();
@@ -441,9 +441,9 @@ function App() {
           <li><a href="#experience" className={activeNav === 'experience' ? 'active' : ''}>Experience</a></li>
           <li><a href="#contact-wrap" className={activeNav === 'contact-wrap' ? 'active' : ''}>Contact</a></li>
         </ul>
-        <button 
-          className={`hamburger ${isMenuOpen ? 'open' : ''}`} 
-          id="hamburger" 
+        <button
+          className={`hamburger ${isMenuOpen ? 'open' : ''}`}
+          id="hamburger"
           aria-label="Menu"
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
@@ -457,9 +457,9 @@ function App() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} id="mobile-menu">
         {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact'].map((item, idx) => (
-          <a 
-            key={item} 
-            href={`#${item.toLowerCase().replace(' ', '-')}${item === 'Contact' ? '-wrap' : ''}`} 
+          <a
+            key={item}
+            href={`#${item.toLowerCase().replace(' ', '-')}${item === 'Contact' ? '-wrap' : ''}`}
             className="mob-link"
             onClick={() => {
               setIsMenuOpen(false);
@@ -484,7 +484,7 @@ function App() {
               Available for new opportunities
             </div>
             <div className="hero-greeting">Hi there, I'm</div>
-            <h1 className="hero-name">Narendra Kumar<br/>Kotipalli</h1>
+            <h1 className="hero-name">Narendra Kumar<br />Kotipalli</h1>
             <div className="hero-role-wrapper">
               <span className="hero-role-prefix">I am a</span>
               <span id="typing-text">{typingText}</span><span className="typing-cursor"></span>
@@ -492,23 +492,23 @@ function App() {
             <p className="hero-bio">Full Stack Developer crafting intelligent, scalable web platforms — from React UIs to FastAPI backends and AI-powered automation. Building the future, one commit at a time.</p>
             <div className="hero-ctas">
               <a href="#projects" className="btn-primary magnetic">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
                 View My Work
               </a>
               <a href="/Narendra_Resume_FS.pdf" className="btn-ghost magnetic" download="Narendra_Resume_FS.pdf">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                 Download Resume
               </a>
             </div>
             <div className="hero-socials">
               <a href="https://github.com/" className="social-link magnetic" target="_blank" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></svg>
               </a>
               <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="social-link magnetic" target="_blank" title="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
               </a>
               <a href="mailto:narendrakumarkotipalli@gmail.com" className="social-link magnetic" title="Email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
               </a>
             </div>
           </div>
@@ -531,7 +531,7 @@ function App() {
                 <span className="code-line code-indent"><span className="code-fn">passion</span><span className="code-punct">:</span> <span className="code-string">"Building intelligent platforms"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">openToWork</span><span className="code-punct">:</span> <span className="code-keyword">true</span></span>
                 <span className="code-line"><span className="code-punct">{'}'};</span></span>
-                <br/>
+                <br />
                 <span className="code-line"><span className="code-comment">// Currently crafting AI-powered experiences</span></span>
                 <span className="code-line"><span className="code-keyword">export default</span> <span className="code-var">developer</span><span className="code-punct">;</span></span>
               </div>
@@ -587,7 +587,7 @@ function App() {
         <div className="skills-section-wrap">
           <div className="section-tag reveal">Tech Arsenal</div>
           <h2 className="section-title reveal delay-1">Tools I <span>Wield Daily</span></h2>
-          <br/>
+          <br />
           <div className="skills-categories">
             {[
               {
@@ -645,7 +645,7 @@ function App() {
       <section id="projects">
         <div className="section-tag reveal">Featured Work</div>
         <h2 className="section-title reveal delay-1">Products I've <span>Shipped</span></h2>
-        <br/><br/>
+        <br /><br />
         <div className="projects-stack">
           {/* Project 1 */}
           <div className="project-card reveal" id="pc1">
@@ -710,7 +710,7 @@ function App() {
       <section id="experience">
         <div className="section-tag reveal">Career Path</div>
         <h2 className="section-title reveal delay-1">Work <span>Experience</span></h2>
-        <br/><br/>
+        <br /><br />
         <div className="timeline-container">
           <div className="timeline-line" id="timeline-line" ref={timelineLineRef}></div>
           <div className="timeline-item reveal delay-1">
@@ -725,8 +725,8 @@ function App() {
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Led a 3-member UI team delivering complex enterprise frontend systems end-to-end</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Architected scalable React applications with TypeScript and Redux Toolkit for AI platforms</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Built secure FastAPI backends with JWT authentication, WebSockets, and RESTful APIs</div>
-                <div className="timeline-point"><div className="timeline-point-dot"></div>Reduced production defects by <strong style={{color:'var(--blue-light)'}}>30%</strong> through rigorous code review practices and testing</div>
-                <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped two full AI platforms: <strong style={{color:'var(--violet-light)'}}>Gurita AI</strong> and <strong style={{color:'var(--violet-light)'}}>Curie</strong> from 0 to production</div>
+                <div className="timeline-point"><div className="timeline-point-dot"></div>Reduced production defects by <strong style={{ color: 'var(--blue-light)' }}>30%</strong> through rigorous code review practices and testing</div>
+                <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped two full AI platforms: <strong style={{ color: 'var(--violet-light)' }}>Gurita AI</strong> and <strong style={{ color: 'var(--violet-light)' }}>Curie</strong> from 0 to production</div>
               </div>
             </div>
           </div>
@@ -738,12 +738,12 @@ function App() {
       <section id="education">
         <div className="section-tag reveal">Academic Background</div>
         <h2 className="section-title reveal delay-1">Education</h2>
-        <br/><br/>
+        <br /><br />
         <div className="edu-card reveal delay-2">
           <div className="edu-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
           </div>
           <div>
@@ -762,12 +762,12 @@ function App() {
           <div className="contact-grid">
             <div className="reveal-left">
               <div className="section-tag">Get In Touch</div>
-              <h2 className="contact-heading">Let's Build<br/><span>Something Great</span></h2>
+              <h2 className="contact-heading">Let's Build<br /><span>Something Great</span></h2>
               <p className="contact-sub">I'm always excited to work on ambitious projects. Whether you have a product idea, a challenge to solve, or just want to chat — my inbox is open.</p>
               <div className="contact-details">
                 <a href="mailto:narendrakumarkotipalli@gmail.com" className="contact-item">
                   <div className="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                   </div>
                   <div>
                     <div className="contact-item-label">Email</div>
@@ -776,7 +776,7 @@ function App() {
                 </a>
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.18 9.81 19.79 19.79 0 0 1 1.08 2.2 2 2 0 0 1 3.06.02h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.18 9.81 19.79 19.79 0 0 1 1.08 2.2 2 2 0 0 1 3.06.02h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14.92z" /></svg>
                   </div>
                   <div>
                     <div className="contact-item-label">Phone</div>
@@ -785,7 +785,7 @@ function App() {
                 </div>
                 <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="contact-item" target="_blank">
                   <div className="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
                   </div>
                   <div>
                     <div className="contact-item-label">LinkedIn</div>
@@ -797,24 +797,24 @@ function App() {
             <div className="reveal-right delay-2">
               <div className="contact-form" id="contact-form">
                 <div className="form-group">
-                  <label>Your Name <span style={{color: '#f43f5e'}}>*</span></label>
+                  <label>Your Name <span style={{ color: '#f43f5e' }}>*</span></label>
                   <input type="text" placeholder="John Doe" id="f-name" required />
                 </div>
                 <div className="form-group">
-                  <label>Email Address <span style={{color: '#f43f5e'}}>*</span></label>
+                  <label>Email Address <span style={{ color: '#f43f5e' }}>*</span></label>
                   <input type="email" placeholder="john@company.com" id="f-email" required />
                 </div>
                 <div className="form-group">
-                  <label>Message <span style={{color: '#f43f5e'}}>*</span></label>
+                  <label>Message <span style={{ color: '#f43f5e' }}>*</span></label>
                   <textarea placeholder="Tell me about your project..." id="f-msg" required></textarea>
                 </div>
-                <button 
-                  className="btn-send magnetic" 
-                  id="send-btn" 
+                <button
+                  className="btn-send magnetic"
+                  id="send-btn"
                   type="button"
                   onClick={handleContactSubmit}
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                   Send Message
                 </button>
               </div>
@@ -826,26 +826,26 @@ function App() {
       {/* Footer */}
       <footer>
         <div className="footer-socials">
-        
+
           <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="footer-social" target="_blank" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
           </a>
           <a href="mailto:narendrakumarkotipalli@gmail.com" className="footer-social" title="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
           </a>
         </div>
         <div className="footer-copy">© 2025 <span>Narendra Kumar Kotipalli</span> · Built with passion & precision</div>
       </footer>
 
       {/* Scroll to top */}
-      <button 
-        id="scroll-top" 
-        className={scrollTopVisible ? 'visible' : ''} 
+      <button
+        id="scroll-top"
+        className={scrollTopVisible ? 'visible' : ''}
         title="Back to top"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <polyline points="18 15 12 9 6 15"/>
+          <polyline points="18 15 12 9 6 15" />
         </svg>
       </button>
     </>
