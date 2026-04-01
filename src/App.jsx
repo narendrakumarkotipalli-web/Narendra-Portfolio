@@ -526,8 +526,12 @@ function App() {
                 <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Full Stack Developer"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"2+ years"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">location</span><span className="code-punct">:</span> <span className="code-string">"Hyderabad, IN"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span> <span className="code-punct">[</span><span className="code-string">"React"</span><span className="code-punct">,</span> <span className="code-string">"FastAPI"</span><span className="code-punct">,</span> <span className="code-string">"Python"</span><span className="code-punct">],</span></span>
-                <span className="code-line code-indent"><span className="code-fn">aiProjects</span><span className="code-punct">:</span> <span className="code-num">2</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span> <span className="code-punct">[</span><span className="code-string">"React"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Node JS"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Express JS"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Python"</span><span className="code-punct">],</span></span>
+                <span className="code-line code-indent"><span className="code-fn">Projects</span><span className="code-punct">:</span> <span className="code-num">4</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">passion</span><span className="code-punct">:</span> <span className="code-string">"Building intelligent platforms"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">openToWork</span><span className="code-punct">:</span> <span className="code-keyword">true</span></span>
                 <span className="code-line"><span className="code-punct">{'}'};</span></span>
@@ -550,7 +554,7 @@ function App() {
               <div className="about-monogram-large">KNK</div>
               <div className="about-avatar-ring"></div>
               <div className="about-avatar-ring2"></div>
-              <div className="about-floating-elem top-right"> 2yr exp</div>
+              <div className="about-floating-elem top-right"> 2+yr exp</div>
               <div className="about-floating-elem bottom-left"> AI Builder</div>
             </div>
           </div>
@@ -565,8 +569,8 @@ function App() {
                 <div className="stat-label">Years Experience</div>
               </div>
               <div className="stat-card reveal delay-2">
-                <div className="stat-num counter" data-target="2">0</div>
-                <div className="stat-label">AI Platforms Built</div>
+                <div className="stat-num counter" data-target="4">0</div>
+                <div className="stat-label">Projects Completed</div>
               </div>
               <div className="stat-card reveal delay-3">
                 <div className="stat-num counter-pct" data-target="30">0</div>
@@ -623,10 +627,18 @@ function App() {
               {
                 title: 'Tools & Workflow',
                 skills: ['Git', 'Postman', 'JIRA', 'Agile/Scrum', 'Bitbucket'],
-                color: 'rose',
+                color: 'teal',
                 delay: 'delay-4'
+              },
+
+              {
+                title: 'AI Tools',
+                skills: ['Claude', 'Cursor', 'Antigravity', "Copilot", 'ChatGPT', 'Perplexity', 'Gemini'],
+                color: 'indigo',
+                delay: 'delay-5'
               }
             ].map((cat, i) => (
+
               <div key={i} className={`reveal ${cat.delay}`}>
                 <div className="skill-category-title">{cat.title}</div>
                 <div className="skills-pills">
@@ -676,6 +688,61 @@ function App() {
           </div>
 
           {/* Project 2 */}
+          <div className="project-card reverse reveal" id="pc4">
+            <div className="project-glow glow-emerald"></div>
+            <div className="project-meta">
+              <div className="project-tags-row">
+                <span className="project-tag-badge tag-auto">Automation</span>
+                <span className="project-tag-badge tag-ent">Enterprise</span>
+              </div>
+              <h3 className="project-title">RPA Web Automation Platform</h3>
+              <p className="project-desc">A no-code/low-code RPA system that enables users to record web actions and replay them automatically. It acts as a digital worker, reducing manual effort by automating repetitive tasks with dynamic inputs and secure session handling.</p>
+              <div className="project-highlights">
+                <div className="project-highlight">Visual Workflow Recording & Replay Engine</div>
+                <div className="project-highlight">Dynamic Data Injection (Credentials, Form data, APIs)</div>
+                <div className="project-highlight">Cross-Browser support (Chrome, Edge, Firefox)</div>
+                <div className="project-highlight">Credential Management & Secure Vault Integration</div>
+              </div>
+              <div className="project-techs">
+                {['Node.js', 'Express.js', 'React', 'Redux', 'MongoDB', 'Redis'].map(t => (
+                  <span key={t} className="tech-chip">{t}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-visual">
+              <img src="/rpa.png" alt="RPA Automation Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="project-card reveal" id="pc3">
+            <div className="project-glow glow-cyan"></div>
+            <div className="project-meta">
+              <div className="project-tags-row">
+                <span className="project-tag-badge tag-sec">Security</span>
+                <span className="project-tag-badge tag-ms">Microservices</span>
+                <span className="project-tag-badge tag-ent">Enterprise</span>
+              </div>
+              <h3 className="project-title">Central Authentication System</h3>
+              <p className="project-desc">A unified authentication and authorization service designed to securely manage user identity across multiple microservices. Instead of each microservice handling auth independently, this system centralizes login, token generation, and secure session management.</p>
+              <div className="project-highlights">
+                <div className="project-highlight">Centralized JWT login, token generation & refresh</div>
+                <div className="project-highlight">Stateless session management using Bearer token strategy</div>
+                <div className="project-highlight">Role-Based & Permission-Based Access Control (RBAC)</div>
+                <div className="project-highlight">Refresh token rotation & protection against replay attacks</div>
+              </div>
+              <div className="project-techs">
+                {['Java', 'Spring Boot', 'JWT', 'Redis', 'MongoDB', 'Docker', 'REST APIs'].map(t => (
+                  <span key={t} className="tech-chip">{t}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-visual">
+              <img src="/cas.png" alt="Central Authentication System" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+            </div>
+          </div>
+
+          {/* Project 4 */}
           <div className="project-card reverse reveal" id="pc2">
             <div className="project-glow glow-violet"></div>
             <div className="project-meta">
@@ -703,6 +770,8 @@ function App() {
             </div>
           </div>
         </div>
+
+
       </section>
 
       {/* EXPERIENCE SECTION */}
@@ -718,7 +787,7 @@ function App() {
             <div className="timeline-card">
               <div className="timeline-header">
                 <div className="timeline-role">Full Stack Developer</div>
-                <div className="timeline-date">Jan 2023 — Present</div>
+                <div className="timeline-date">Feb 2024 — Present</div>
               </div>
               <div className="timeline-company">@ <strong>FISClouds Pvt. Ltd.</strong> · Hyderabad, India</div>
               <div className="timeline-points">
@@ -727,6 +796,7 @@ function App() {
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Built secure FastAPI backends with JWT authentication, WebSockets, and RESTful APIs</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Reduced production defects by <strong style={{ color: 'var(--blue-light)' }}>30%</strong> through rigorous code review practices and testing</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped two full AI platforms: <strong style={{ color: 'var(--violet-light)' }}>Gurita AI</strong> and <strong style={{ color: 'var(--violet-light)' }}>Curie</strong> from 0 to production</div>
+                <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped a full Automation platform: <strong style={{ color: 'var(--violet-light)' }}>Lasis RPA</strong> from 0 to production</div>
               </div>
             </div>
           </div>

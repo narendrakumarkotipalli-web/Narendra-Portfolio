@@ -793,6 +793,12 @@ section {
 .pill-amber:hover { background: rgba(245,158,11,0.18); box-shadow: 0 6px 20px rgba(245,158,11,0.25); }
 .pill-rose { background: rgba(244,63,94,0.1); border-color: rgba(244,63,94,0.25); color: var(--rose); }
 .pill-rose:hover { background: rgba(244,63,94,0.18); box-shadow: 0 6px 20px rgba(244,63,94,0.25); }
+.pill-indigo { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25); color: #818cf8; }
+.pill-indigo:hover { background: rgba(99,102,241,0.18); box-shadow: 0 6px 20px rgba(99,102,241,0.25); }
+.pill-teal { background: rgba(20, 184, 166, 0.1); border-color: rgba(20, 184, 166, 0.25); color: #2dd4bf; }
+.pill-teal:hover { background: rgba(20, 184, 166, 0.18); box-shadow: 0 6px 20px rgba(20, 184, 166, 0.25); }
+
+
 
 /* ═══════════════════════════════════════════
    PROJECTS SECTION
@@ -843,6 +849,10 @@ section {
 .project-card:hover .project-glow { opacity: 0.12; }
 .glow-blue { background: var(--blue); top: -50px; right: -50px; }
 .glow-violet { background: var(--violet); bottom: -50px; left: -50px; }
+.glow-cyan { background: var(--cyan); top: -50px; right: -50px; }
+.glow-emerald { background: var(--emerald); bottom: -50px; left: -50px; }
+
+
 
 .project-tags-row {
   display: flex; gap: 0.5rem; flex-wrap: wrap;
@@ -861,6 +871,9 @@ section {
 .tag-health { background: rgba(16,185,129,0.12); color: var(--emerald); border: 1px solid rgba(16,185,129,0.2); }
 .tag-bio { background: rgba(244,63,94,0.1); color: var(--rose); border: 1px solid rgba(244,63,94,0.2); }
 .tag-ent { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
+.tag-sec { background: rgba(6,182,212,0.12); color: var(--cyan); border: 1px solid rgba(6,182,212,0.25); }
+.tag-ms { background: rgba(59,130,246,0.15); color: var(--blue-light); border: 1px solid rgba(59,130,246,0.25); }
+
 
 .project-title {
   font-family: var(--font-display);
