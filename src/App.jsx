@@ -495,7 +495,7 @@ function App() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
                 View My Work
               </a>
-              <a href="/Narendra_Resume_FS.pdf" className="btn-ghost magnetic" download="Narendra_Resume_FS.pdf">
+              <a href="/Narendra_Kumar_Resume.pdf" className="btn-ghost magnetic" download="Narendra_Kumar_Resume.pdf">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                 Download Resume
               </a>
@@ -531,7 +531,7 @@ function App() {
                   <span className="code-punct">,</span> <span className="code-string">"Express JS"</span>
                   <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span>
                   <span className="code-punct">,</span> <span className="code-string">"Python"</span><span className="code-punct">],</span></span>
-                <span className="code-line code-indent"><span className="code-fn">Projects</span><span className="code-punct">:</span> <span className="code-num">4</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent"><span className="code-fn">Projects</span><span className="code-punct">:</span> <span className="code-num">3</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">passion</span><span className="code-punct">:</span> <span className="code-string">"Building intelligent platforms"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">openToWork</span><span className="code-punct">:</span> <span className="code-keyword">true</span></span>
                 <span className="code-line"><span className="code-punct">{'}'};</span></span>
@@ -569,7 +569,7 @@ function App() {
                 <div className="stat-label">Years Experience</div>
               </div>
               <div className="stat-card reveal delay-2">
-                <div className="stat-num counter" data-target="4">0</div>
+                <div className="stat-num counter" data-target="3">0</div>
                 <div className="stat-label">Projects Completed</div>
               </div>
               <div className="stat-card reveal delay-3">
@@ -715,35 +715,7 @@ function App() {
           </div>
 
           {/* Project 3 */}
-          <div className="project-card reveal" id="pc3">
-            <div className="project-glow glow-cyan"></div>
-            <div className="project-meta">
-              <div className="project-tags-row">
-                <span className="project-tag-badge tag-sec">Security</span>
-                <span className="project-tag-badge tag-ms">Microservices</span>
-                <span className="project-tag-badge tag-ent">Enterprise</span>
-              </div>
-              <h3 className="project-title">Central Authentication System</h3>
-              <p className="project-desc">A unified authentication and authorization service designed to securely manage user identity across multiple microservices. Instead of each microservice handling auth independently, this system centralizes login, token generation, and secure session management.</p>
-              <div className="project-highlights">
-                <div className="project-highlight">Centralized JWT login, token generation & refresh</div>
-                <div className="project-highlight">Stateless session management using Bearer token strategy</div>
-                <div className="project-highlight">Role-Based & Permission-Based Access Control (RBAC)</div>
-                <div className="project-highlight">Refresh token rotation & protection against replay attacks</div>
-              </div>
-              <div className="project-techs">
-                {['Java', 'Spring Boot', 'JWT', 'Redis', 'MongoDB', 'Docker', 'REST APIs'].map(t => (
-                  <span key={t} className="tech-chip">{t}</span>
-                ))}
-              </div>
-            </div>
-            <div className="project-visual">
-              <img src="/cas.png" alt="Central Authentication System" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
-            </div>
-          </div>
-
-          {/* Project 4 */}
-          <div className="project-card reverse reveal" id="pc2">
+          <div className="project-card reveal" id="pc2">
             <div className="project-glow glow-violet"></div>
             <div className="project-meta">
               <div className="project-tags-row">

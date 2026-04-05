@@ -643,7 +643,9 @@ section {
   display: flex; align-items: center; justify-content: center;
 }
 .about-avatar-wrap {
-  width: 420px; height: 320px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 420 / 320;
   position: relative;
 }
 .about-avatar-bg {
@@ -662,7 +664,7 @@ section {
 }
 .about-monogram-large {
   font-family: var(--font-display);
-  font-size: 7rem;
+  font-size: clamp(3rem, 15vw, 7rem);
   font-weight: 800;
   letter-spacing: 0.02em;
   background: var(--grad-main);
@@ -673,6 +675,7 @@ section {
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.9;
+  white-space: nowrap;
 }
 .about-avatar-ring {
   position: absolute;
@@ -696,8 +699,8 @@ section {
   font-size: 0.78rem;
   font-family: var(--font-mono);
 }
-.about-floating-elem.top-right { top: -20px; right: -30px; color: var(--blue-light); }
-.about-floating-elem.bottom-left { bottom: -20px; left: -30px; color: var(--emerald); }
+.about-floating-elem.top-right { top: -10px; right: 2%; color: var(--blue-light); }
+.about-floating-elem.bottom-left { bottom: -10px; left: 2%; color: var(--emerald); }
 
 .about-text p {
   color: var(--text-secondary);
@@ -1279,4 +1282,9 @@ footer {
   .timeline-node { left: -2.45rem; }
   .hero-ctas { flex-direction: column; }
   .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  
+  /* About section mobile refinements */
+  .about-monogram-large { font-size: clamp(2rem, 18vw, 4.5rem); }
+  .section-title { font-size: clamp(1.75rem, 8vw, 2.8rem); line-height: 1.1; }
+  .about-text p { font-size: 0.95rem; }
 }
