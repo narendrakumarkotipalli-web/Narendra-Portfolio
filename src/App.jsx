@@ -495,7 +495,7 @@ function App() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
                 View My Work
               </a>
-              <a href="/Narendra_Kumar_Resume.pdf" className="btn-ghost magnetic" download="Narendra_Kumar_Resume.pdf">
+              <a href="/Kotipalli_Narendra_Kumar.pdf" className="btn-ghost magnetic" download="Kotipalli_Narendra_Kumar.pdf">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                 Download Resume
               </a>
@@ -523,8 +523,8 @@ function App() {
               <div className="code-content">
                 <span className="code-line"><span className="code-keyword">const</span> <span className="code-var">developer</span> <span className="code-punct">=</span> <span className="code-punct">{'{'}</span></span>
                 <span className="code-line code-indent"><span className="code-fn">name</span><span className="code-punct">:</span> <span className="code-string">"Narendra Kumar"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Full Stack Developer"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"2+ years"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer| Full Stack Developer"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"3 years"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">location</span><span className="code-punct">:</span> <span className="code-string">"Hyderabad, IN"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span> <span className="code-punct">[</span><span className="code-string">"React"</span>
                   <span className="code-punct">,</span> <span className="code-string">"Node JS"</span>
@@ -554,7 +554,7 @@ function App() {
               <div className="about-monogram-large">KNK</div>
               <div className="about-avatar-ring"></div>
               <div className="about-avatar-ring2"></div>
-              <div className="about-floating-elem top-right"> 2+yr exp</div>
+              <div className="about-floating-elem top-right"> 3 yr exp</div>
               <div className="about-floating-elem bottom-left"> AI Builder</div>
             </div>
           </div>
@@ -565,7 +565,7 @@ function App() {
             <p>Today, I architect enterprise-grade platforms that merge beautiful React frontends with powerful FastAPI backends — and increasingly, AI systems that automate and augment human workflows. I thrive at the intersection of <strong>performance, design, and intelligence</strong>.</p>
             <div className="stats-grid">
               <div className="stat-card reveal delay-1">
-                <div className="stat-num counter" data-target="2">0</div>
+                <div className="stat-num counter" data-target="3">0</div>
                 <div className="stat-label">Years Experience</div>
               </div>
               <div className="stat-card reveal delay-2">
@@ -758,8 +758,8 @@ function App() {
             <div className="timeline-node"></div>
             <div className="timeline-card">
               <div className="timeline-header">
-                <div className="timeline-role">Full Stack Developer</div>
-                <div className="timeline-date">Feb 2024 — Present</div>
+                <div className="timeline-role">Gen AI Engineer | Full Stack Developer</div>
+                <div className="timeline-date">Feb 2024 — Jul 2026</div>
               </div>
               <div className="timeline-company">@ <strong>FISClouds Pvt. Ltd.</strong> · Hyderabad, India</div>
               <div className="timeline-points">
@@ -769,6 +769,21 @@ function App() {
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Reduced production defects by <strong style={{ color: 'var(--blue-light)' }}>30%</strong> through rigorous code review practices and testing</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped two full AI platforms: <strong style={{ color: 'var(--violet-light)' }}>Gurita AI</strong> and <strong style={{ color: 'var(--violet-light)' }}>Curie</strong> from 0 to production</div>
                 <div className="timeline-point"><div className="timeline-point-dot"></div>Shipped a full Automation platform: <strong style={{ color: 'var(--violet-light)' }}>Lasis RPA</strong> from 0 to production</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-item reveal delay-2">
+            <div className="timeline-node"></div>
+            <div className="timeline-card">
+              <div className="timeline-header">
+                <div className="timeline-role">Web Developer Intern</div>
+                <div className="timeline-date">Aug 2023 — Jan 2024</div>
+              </div>
+              <div className="timeline-company">@ <strong>Visual Path</strong> · Hyderabad, India</div>
+              <div className="timeline-points">
+                <div className="timeline-point"><div className="timeline-point-dot"></div><strong>Health Care — Appointment Site:</strong> Built a real-time doctor appointment system with MongoDB for secure data storage and React Email for instant confirmations.</div>
+                <div className="timeline-point"><div className="timeline-point-dot"></div><strong>PValue Statistics — Clients contact form:</strong> Developed a contact form that captures client data in real time and stores it in Google Sheets, improving tracking and eliminating manual entry.</div>
               </div>
             </div>
           </div>
