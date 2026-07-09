@@ -374,20 +374,19 @@ function App() {
     btn.style.pointerEvents = 'none';
 
     try {
-      // Using FormSubmit.co for direct email delivery
-      const response = await fetch("https://formsubmit.co/ajax/narendrakumarkotipalli@gmail.com", {
+      // Using Web3Forms for reliable email delivery
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          access_key: "87631902-e399-42fd-8e3a-8aa10998fc9f",
           name: name,
           email: email,
           message: msg,
-          _subject: "New Contact Form Submission - Portfolio",
-          _captcha: "false",
-          _template: "table"
+          subject: "New Contact Form Submission - Portfolio"
         })
       });
 
