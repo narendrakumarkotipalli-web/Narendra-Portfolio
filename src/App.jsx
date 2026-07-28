@@ -150,7 +150,7 @@ function App() {
   // TYPING EFFECT
   // ═══════════════════════════════════
   useEffect(() => {
-    const roles = ['Full Stack Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder'];
+    const roles = ['Full Stack Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder', 'Gen AI Engineer', 'Frontend Developer'];
     let roleIdx = 0, charIdx = 0, deleting = false;
     let timer;
 
@@ -525,7 +525,11 @@ function App() {
                 <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer| Full Stack Developer"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"3 years"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">location</span><span className="code-punct">:</span> <span className="code-string">"Hyderabad, IN"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span> <span className="code-punct">[</span><span className="code-string">"React"</span>
+                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span>
+                  <span className="code-punct">[</span><span className="code-string">"React"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Redux toolkit"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Typescript"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Javascript"</span>
                   <span className="code-punct">,</span> <span className="code-string">"Node JS"</span>
                   <span className="code-punct">,</span> <span className="code-string">"Express JS"</span>
                   <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span>
@@ -560,7 +564,7 @@ function App() {
           <div className="about-text reveal-right">
             <div className="section-tag">About Me</div>
             <h2 className="section-title">From Mechanical Gears to <span>Digital Products</span></h2>
-            <p>Started as a Mechanical Engineering graduate, I discovered a passion for building things that live on screens — and never looked back. Through relentless self-study and real-world projects, I transitioned into a <strong>Full Stack Developer at FISClouds Pvt. Ltd.</strong></p>
+            <p>Started as a Mechanical Engineering graduate, I discovered a passion for building things that live on screens — and never looked back. Through relentless self-study and real-world projects, I transitioned into a <strong>GenAI Engineer at FISClouds Pvt. Ltd.</strong></p>
             <p>Today, I architect enterprise-grade platforms that merge beautiful React frontends with powerful FastAPI backends — and increasingly, AI systems that automate and augment human workflows. I thrive at the intersection of <strong>performance, design, and intelligence</strong>.</p>
             <div className="stats-grid">
               <div className="stat-card reveal delay-1">
@@ -758,7 +762,7 @@ function App() {
             <div className="timeline-card">
               <div className="timeline-header">
                 <div className="timeline-role">Gen AI Engineer | Full Stack Developer</div>
-                <div className="timeline-date">Feb 2024 — Jul 2026</div>
+                <div className="timeline-date">February 2024 — July 2026</div>
               </div>
               <div className="timeline-company">@ <strong>FISClouds Pvt. Ltd.</strong> · Hyderabad, India</div>
               <div className="timeline-points">
@@ -777,7 +781,7 @@ function App() {
             <div className="timeline-card">
               <div className="timeline-header">
                 <div className="timeline-role">Web Developer Intern</div>
-                <div className="timeline-date">Aug 2023 — Jan 2024</div>
+                <div className="timeline-date">July 2023 — January 2024</div>
               </div>
               <div className="timeline-company">@ <strong>Visual Path</strong> · Hyderabad, India</div>
               <div className="timeline-points">

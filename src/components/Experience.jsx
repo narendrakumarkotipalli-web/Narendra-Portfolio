@@ -20,7 +20,7 @@ const Experience = () => {
          role: 'Web Developer Intern',
          company: '@ Visual Path',
          location: ' · Hyderabad, India',
-         date: 'Aug 2023 — Jan 2024',
+         date: 'Jul 2023 — Jan 2024',
          points: [
             'Health Care — Appointment Site: Built a real-time doctor appointment system with MongoDB for secure data storage and React Email for instant confirmations.',
             'PValue Statistics — Client Contact Form: Developed a contact form that captures client data in real time and stores it in Google Sheets, improving tracking and eliminating manual entry.'
