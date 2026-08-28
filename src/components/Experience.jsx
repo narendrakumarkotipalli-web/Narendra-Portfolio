@@ -3,7 +3,7 @@ import React from 'react';
 const Experience = () => {
    const experiences = [
       {
-         role: 'Gen AI Engineer | Full Stack Developer',
+         role: 'Gen AI Engineer | Frontend Developer',
          company: '@ FISClouds Pvt. Ltd.',
          location: ' · Hyderabad, India',
          date: 'Jan 2023 — Present',
