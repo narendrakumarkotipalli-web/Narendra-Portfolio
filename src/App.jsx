@@ -150,7 +150,7 @@ function App() {
   // TYPING EFFECT
   // ═══════════════════════════════════
   useEffect(() => {
-    const roles = ['Full Stack Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder', 'Gen AI Engineer', 'Frontend Developer'];
+    const roles = ['Frontend Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder', 'Gen AI Engineer', 'Frontend Developer'];
     let roleIdx = 0, charIdx = 0, deleting = false;
     let timer;
 
@@ -488,13 +488,13 @@ function App() {
               <span className="hero-role-prefix">I am a</span>
               <span id="typing-text">{typingText}</span><span className="typing-cursor"></span>
             </div>
-            <p className="hero-bio">Full Stack Developer crafting intelligent, scalable web platforms — from React UIs to FastAPI backends and AI-powered automation. Building the future, one commit at a time.</p>
+            <p className="hero-bio">Frontend Developer crafting intelligent, scalable web platforms — from React UIs to FastAPI backends and AI-powered automation. Building the future, one commit at a time.</p>
             <div className="hero-ctas">
               <a href="#projects" className="btn-primary magnetic">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
                 View My Work
               </a>
-              <a href="/Kotipalli_Narendra_Kumar.pdf" className="btn-ghost magnetic" download="Kotipalli_Narendra_Kumar.pdf">
+              <a href="/Narendra_kumar_kotipalli_resume.pdf" className="btn-ghost magnetic" download="Narendra_kumar_kotipalli_resume.pdf">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
                 Download Resume
               </a>
@@ -522,18 +522,21 @@ function App() {
               <div className="code-content">
                 <span className="code-line"><span className="code-keyword">const</span> <span className="code-var">developer</span> <span className="code-punct">=</span> <span className="code-punct">{'{'}</span></span>
                 <span className="code-line code-indent"><span className="code-fn">name</span><span className="code-punct">:</span> <span className="code-string">"Narendra Kumar"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer| Full Stack Developer"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer| Frontend Developer"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"3 years"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">location</span><span className="code-punct">:</span> <span className="code-string">"Hyderabad, IN"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span>
-                  <span className="code-punct">[</span><span className="code-string">"React"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Redux toolkit"</span>
+                  <span className="code-punct">[</span><span className="code-string">"HTML"</span>
+                  <span className="code-punct">,</span><span className="code-string">"CSS"</span>
+                  <span className="code-punct">,</span><span className="code-string">"Javascript"</span>
+                  <span className="code-punct">,</span><span className="code-string">"React"</span>
                   <span className="code-punct">,</span> <span className="code-string">"Typescript"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Javascript"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Node JS"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Express JS"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Python"</span><span className="code-punct">],</span></span>
+                  <span className="code-punct">,</span> <span className="code-string">"Redux toolkit"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Bootstrap"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Material UI"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Tailwind CSS"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"Python"</span>
+                  <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span><span className="code-punct">],</span></span>
                 <span className="code-line code-indent"><span className="code-fn">Projects</span><span className="code-punct">:</span> <span className="code-num">3</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">passion</span><span className="code-punct">:</span> <span className="code-string">"Building intelligent platforms"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">openToWork</span><span className="code-punct">:</span> <span className="code-keyword">true</span></span>
@@ -598,46 +601,45 @@ function App() {
           <div className="skills-categories">
             {[
               {
-                title: 'Frontend',
-                skills: ['React.js', 'TypeScript', 'Redux Toolkit', 'Next.js', 'React Flow', 'JavaScript ES6+'],
+                title: 'Front-End',
+                skills: ['React.js (Hooks, Suspense, Server Components)', 'React 18', 'Next.js (App Router, SSR, SSG, ISR)', 'TypeScript', 'JavaScript (ES6+)', 'Redux Toolkit', 'TanStack Query', 'Context API', 'Component Architecture', 'Performance Optimization', 'Design Patterns', 'Vite', 'Webpack', 'Custom Hooks'],
                 color: 'blue',
                 delay: 'delay-1'
               },
               {
                 title: 'UI & Styling',
-                skills: ['Tailwind CSS', 'Material UI', 'Bootstrap 5', 'SASS/SCSS', 'HTML5', 'CSS3'],
+                skills: ['HTML5', 'CSS3', 'Tailwind CSS', 'Material UI', 'Bootstrap', 'SCSS', 'Web Accessibility (WCAG 2.1 AA)', 'Semantic HTML', 'ARIA', 'Responsive Web Design', 'Cross-Browser Compatibility', 'Design Systems'],
                 color: 'violet',
                 delay: 'delay-2'
               },
               {
-                title: 'Backend',
-                skills: ['Node.js', 'Express.js', 'Python', 'FastAPI', 'REST APIs', 'JWT Auth', 'WebSockets'],
-                color: 'cyan',
+                title: 'Performance Optimization',
+                skills: ['Core Web Vitals (LCP, INP, CLS)', 'Lighthouse', 'Code Splitting', 'Lazy Loading', 'Memoization', 'React Rendering Optimization', 'Bundle Analysis', 'Chrome DevTools', 'React DevTools Profiler', 'Performance Auditing'],
+                color: 'teal',
                 delay: 'delay-3'
               },
               {
-                title: 'Database',
-                skills: ['MongoDB', 'PostgreSQL', 'Redis', 'BigQuery'],
-                color: 'emerald',
+                title: 'Back-End (Full-Stack)',
+                skills: ['Python', 'FastAPI', 'RESTful APIs', 'REST API Development', 'JWT Authentication', 'Database Design'],
+                color: 'cyan',
                 delay: 'delay-2'
               },
               {
-                title: 'Cloud & DevOps',
-                skills: ['Docker', 'GCP', 'GitHub Actions', 'GitLab CI/CD'],
-                color: 'amber',
+                title: 'GenAI & AI Tools',
+                skills: ['GitHub Copilot', 'Cursor', 'Builder.io', 'Claude', 'Prompt Engineering', 'AI Integration'],
+                color: 'indigo',
                 delay: 'delay-3'
               },
               {
-                title: 'Tools & Workflow',
-                skills: ['Git', 'Postman', 'JIRA', 'Agile/Scrum', 'Bitbucket'],
-                color: 'teal',
+                title: 'Cloud, Databases & DevOps',
+                skills: ['Docker', 'GCP', 'Cloud Storage', 'BigQuery', 'GitLab CI/CD', 'MongoDB', 'PostgreSQL', 'Redis', 'CI/CD Automation', 'GitHub Actions'],
+                color: 'amber',
                 delay: 'delay-4'
               },
-
               {
-                title: 'AI Tools',
-                skills: ['Claude', 'Cursor', 'Antigravity', "Copilot", 'ChatGPT', 'Perplexity', 'Gemini'],
-                color: 'indigo',
+                title: 'Tools, Testing & Practices',
+                skills: ['Git', 'Bitbucket', 'Postman', 'JIRA', 'Agile/Scrum', 'API Testing', 'Jest', 'Vitest', 'React Testing Library (RTL)', 'Cypress', 'Playwright', 'Mock Service Worker (MSW)', 'axe-core', 'Code Coverage Analysis', 'Environment Configuration (.env)', 'Version Control Best Practices', 'Secure Coding Practices'],
+                color: 'emerald',
                 delay: 'delay-5'
               }
             ].map((cat, i) => (
@@ -662,25 +664,28 @@ function App() {
         <h2 className="section-title reveal delay-1">Products I've <span>Shipped</span></h2>
         <br /><br />
         <div className="projects-stack">
-          {/* Project 1 */}
+          {/* Project 1: Gurita AI */}
           <div className="project-card reveal" id="pc1">
             <div className="project-glow glow-blue"></div>
             <div className="project-meta">
               <div className="project-tags-row">
-                <span className="project-tag-badge tag-ai">AI</span>
-                <span className="project-tag-badge tag-auto">Automation</span>
-                <span className="project-tag-badge tag-ent">Enterprise</span>
+                <span className="project-tag-badge tag-ai">AI Platform</span>
+                <span className="project-tag-badge tag-auto">Workflow Automation</span>
               </div>
-              <h3 className="project-title">Gurita AI</h3>
-              <p className="project-desc">An enterprise-grade AI agent automation platform featuring a visual drag-and-drop workflow builder, RAG-powered data pipelines, real-time WebSocket streaming, and intelligent dashboards.</p>
+              <h3 className="project-title">Gurita AI — Agent Automation & AI Workflow Platform</h3>
+              <p className="project-desc">Tech Stack: React, TypeScript, Next.js, Redux Toolkit, React Flow, Python, FastAPI, MongoDB, PostgreSQL.</p>
               <div className="project-highlights">
-                <div className="project-highlight">Visual drag-and-drop workflow builder with React Flow</div>
-                <div className="project-highlight">RAG-powered AI querying with chart generation</div>
-                <div className="project-highlight">Role-based access control + shareable dashboards</div>
-                <div className="project-highlight">Real-time WebSocket streaming for live AI outputs</div>
+                <div className="project-highlight">Architected a scalable React/Next.js frontend for an AI agent automation platform, supporting complex workflow creation, configuration, execution, and monitoring across a microservices-based architecture.</div>
+                <div className="project-highlight">Built a node-based workflow builder using React Flow and Redux Toolkit, enabling users to visually create, connect, configure, validate, and manage multi-step AI automation workflows.</div>
+                <div className="project-highlight">Implemented real-time workflow execution using WebSockets, synchronizing node status, execution progress, logs, failures, and completion states without requiring page refreshes.</div>
+                <div className="project-highlight">Improved application load time by 25% through code splitting, lazy loading, rendering optimization, and bundle-level performance analysis.</div>
+                <div className="project-highlight">Developed reusable component architecture and UI design-system components for workflow nodes, forms, configuration panels, dialogs, dashboards, and common interaction patterns.</div>
+                <div className="project-highlight">Integrated REST and GraphQL APIs with client-side caching and asynchronous state management, reducing redundant API requests and improving responsiveness across data-intensive workflow screens.</div>
+                <div className="project-highlight">Implemented internationalization (i18n) for 9 languages, supporting localized UI content and language-aware application workflows for global users.</div>
+                <div className="project-highlight">Built responsive and accessible interfaces using semantic HTML, ARIA, and WCAG 2.1 AA practices across drag-and-drop workflows, forms, dialogs, and dashboards.</div>
               </div>
               <div className="project-techs">
-                {['React', 'TypeScript', 'Redux Toolkit', 'React Flow', 'Node.js', 'FastAPI', 'Python', 'MongoDB', 'WebSockets'].map(t => (
+                {['React', 'TypeScript', 'Next.js', 'Redux Toolkit', 'React Flow', 'Python', 'FastAPI', 'MongoDB', 'PostgreSQL'].map(t => (
                   <span key={t} className="tech-chip">{t}</span>
                 ))}
               </div>
@@ -690,52 +695,26 @@ function App() {
             </div>
           </div>
 
-          {/* Project 2 */}
-          <div className="project-card reverse reveal" id="pc4">
-            <div className="project-glow glow-emerald"></div>
-            <div className="project-meta">
-              <div className="project-tags-row">
-                <span className="project-tag-badge tag-auto">Automation</span>
-                <span className="project-tag-badge tag-ent">Enterprise</span>
-              </div>
-              <h3 className="project-title">RPA Web Automation Platform</h3>
-              <p className="project-desc">A no-code/low-code RPA system that enables users to record web actions and replay them automatically. It acts as a digital worker, reducing manual effort by automating repetitive tasks with dynamic inputs and secure session handling.</p>
-              <div className="project-highlights">
-                <div className="project-highlight">Visual Workflow Recording & Replay Engine</div>
-                <div className="project-highlight">Dynamic Data Injection (Credentials, Form data, APIs)</div>
-                <div className="project-highlight">Cross-Browser support (Chrome, Edge, Firefox)</div>
-                <div className="project-highlight">Credential Management & Secure Vault Integration</div>
-              </div>
-              <div className="project-techs">
-                {['Node.js', 'Express.js', 'React', 'Redux', 'MongoDB', 'Redis'].map(t => (
-                  <span key={t} className="tech-chip">{t}</span>
-                ))}
-              </div>
-            </div>
-            <div className="project-visual">
-              <img src="/rpa.png" alt="RPA Automation Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
-            </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="project-card reveal" id="pc2">
+          {/* Project 2: Curie */}
+          <div className="project-card reverse reveal" id="pc2">
             <div className="project-glow glow-violet"></div>
             <div className="project-meta">
               <div className="project-tags-row">
-                <span className="project-tag-badge tag-ai">AI</span>
-                <span className="project-tag-badge tag-bio">Biomedical</span>
-                <span className="project-tag-badge tag-health">Healthcare</span>
+                <span className="project-tag-badge tag-ai">AI Platform</span>
+                <span className="project-tag-badge tag-bio">Research Platform</span>
               </div>
-              <h3 className="project-title">Curie</h3>
-              <p className="project-desc">An AI-powered biomedical research platform for literature curation, hypothesis generation, and clinical documentation — reducing documentation time by 70%.</p>
+              <h3 className="project-title">Curie — AI-Powered Research Platform</h3>
+              <p className="project-desc">Tech Stack: React, TypeScript, MUI, Python, FastAPI, PostgreSQL.</p>
               <div className="project-highlights">
-                <div className="project-highlight">Full-stack AI document generation (70% time reduction)</div>
-                <div className="project-highlight">Intelligent literature curation + hypothesis generation</div>
-                <div className="project-highlight">Document parsing APIs with structured output</div>
-                <div className="project-highlight">WebSocket streaming for long-running AI tasks</div>
+                <div className="project-highlight">Built production-grade React interfaces for AI-powered document generation, summarization, data extraction, and research workflows, with responsive layouts and real-time result updates.</div>
+                <div className="project-highlight">Developed reusable React component architecture and custom hooks for document workflows, analysis views, research dashboards, and result-review interfaces.</div>
+                <div className="project-highlight">Integrated React frontend with Python/FastAPI services for AI processing, document parsing, structured data extraction, validation, and asynchronous result handling.</div>
+                <div className="project-highlight">Optimized frontend-backend data flows for large document and research datasets, improving request handling, state synchronization, and rendering efficiency.</div>
+                <div className="project-highlight">Built interactive 3D force-directed graph visualizations for hypothesis mapping, entity relationships, and research connections, enabling visual exploration of complex datasets.</div>
+                <div className="project-highlight">Implemented structured loading, error, empty, retry, and asynchronous processing states across AI workflows to provide reliable user feedback during long-running operations.</div>
               </div>
               <div className="project-techs">
-                {['React', 'TypeScript', 'MUI', 'Node.js', 'FastAPI', 'Python', 'MongoDB', 'WebSockets'].map(t => (
+                {['React', 'TypeScript', 'MUI', 'Python', 'FastAPI', 'PostgreSQL'].map(t => (
                   <span key={t} className="tech-chip">{t}</span>
                 ))}
               </div>
@@ -744,9 +723,36 @@ function App() {
               <img src="/curie.png" alt="Curie AI Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
             </div>
           </div>
+
+          {/* Project 3: RPA Web Automation Platform */}
+          <div className="project-card reveal" id="pc4">
+            <div className="project-glow glow-emerald"></div>
+            <div className="project-meta">
+              <div className="project-tags-row">
+                <span className="project-tag-badge tag-auto">Web Automation</span>
+                <span className="project-tag-badge tag-ent">Enterprise</span>
+              </div>
+              <h3 className="project-title">RPA Web Automation Platform</h3>
+              <p className="project-desc">Tech Stack: Python, FastAPI, React, Redux Toolkit, PostgreSQL, Redis.</p>
+              <div className="project-highlights">
+                <div className="project-highlight">Built a browser automation platform using React and FastAPI for workflow recording, configuration, execution, and monitoring of multi-step automation processes.</div>
+                <div className="project-highlight">Designed workflow configuration and execution interfaces using Redux Toolkit to manage complex application state, execution status, validation, errors, and user actions.</div>
+                <div className="project-highlight">Implemented Redis caching, reducing workflow execution time by 30% and improving responsiveness for frequently accessed workflow and execution data.</div>
+                <div className="project-highlight">Developed secure credential and data-injection workflows with encrypted sensitive configuration handling to protect automation-related data.</div>
+                <div className="project-highlight">Designed reusable automation workflows supporting execution across multiple environments, separating environment-specific configuration from core workflow definitions.</div>
+                <div className="project-highlight">Implemented unit and integration testing using Jest and React Testing Library, covering reusable components, workflow logic, and critical user interactions.</div>
+              </div>
+              <div className="project-techs">
+                {['Python', 'FastAPI', 'React', 'Redux Toolkit', 'PostgreSQL', 'Redis'].map(t => (
+                  <span key={t} className="tech-chip">{t}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-visual">
+              <img src="/rpa.png" alt="RPA Automation Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+            </div>
+          </div>
         </div>
-
-
       </section>
 
       {/* EXPERIENCE SECTION */}
@@ -761,7 +767,7 @@ function App() {
             <div className="timeline-node"></div>
             <div className="timeline-card">
               <div className="timeline-header">
-                <div className="timeline-role">Gen AI Engineer | Full Stack Developer</div>
+                <div className="timeline-role">Gen AI Engineer | Frontend Developer</div>
                 <div className="timeline-date">February 2024 — July 2026</div>
               </div>
               <div className="timeline-company">@ <strong>FISClouds Pvt. Ltd.</strong> · Hyderabad, India</div>
@@ -810,7 +816,7 @@ function App() {
             <div className="edu-degree">B.Tech — Mechanical Engineering</div>
             <div className="edu-college">Aditya College of Engineering, Surampalem</div>
             <div className="edu-year">July 2018 — May 2021</div>
-            <div className="edu-note">"Transitioned from Mechanical Engineering to Full Stack Development through self-driven learning, passion for technology, and real-world project experience."</div>
+            <div className="edu-note">"Transitioned from Mechanical Engineering to Frontend Development through self-driven learning, passion for technology, and real-world project experience."</div>
           </div>
         </div>
       </section>
