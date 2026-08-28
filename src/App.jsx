@@ -522,22 +522,15 @@ function App() {
               <div className="code-content">
                 <span className="code-line"><span className="code-keyword">const</span> <span className="code-var">developer</span> <span className="code-punct">=</span> <span className="code-punct">{'{'}</span></span>
                 <span className="code-line code-indent"><span className="code-fn">name</span><span className="code-punct">:</span> <span className="code-string">"Narendra Kumar"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer| Frontend Developer"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent"><span className="code-fn">role</span><span className="code-punct">:</span> <span className="code-string">"Gen AI Engineer | Frontend Developer"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">experience</span><span className="code-punct">:</span> <span className="code-string">"3 years"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">location</span><span className="code-punct">:</span> <span className="code-string">"Hyderabad, IN"</span><span className="code-punct">,</span></span>
-                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">:</span>
-                  <span className="code-punct">[</span><span className="code-string">"HTML"</span>
-                  <span className="code-punct">,</span><span className="code-string">"CSS"</span>
-                  <span className="code-punct">,</span><span className="code-string">"Javascript"</span>
-                  <span className="code-punct">,</span><span className="code-string">"React"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Typescript"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Redux toolkit"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Bootstrap"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Material UI"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Tailwind CSS"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"Python"</span>
-                  <span className="code-punct">,</span> <span className="code-string">"FastAPI"</span><span className="code-punct">],</span></span>
-                <span className="code-line code-indent"><span className="code-fn">Projects</span><span className="code-punct">:</span> <span className="code-num">3</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent code-highlight"><span className="code-fn">stack</span><span className="code-punct">: [</span></span>
+                <span className="code-line code-indent2"><span className="code-string">"HTML"</span><span className="code-punct">,</span> <span className="code-string">"CSS"</span><span className="code-punct">,</span> <span className="code-string">"JavaScript"</span><span className="code-punct">,</span> <span className="code-string">"React"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent2"><span className="code-string">"TypeScript"</span><span className="code-punct">,</span> <span className="code-string">"Redux Toolkit"</span><span className="code-punct">,</span> <span className="code-string">"Bootstrap"</span><span className="code-punct">,</span></span>
+                <span className="code-line code-indent2"><span className="code-string">"Material UI"</span><span className="code-punct">,</span> <span className="code-string">"Tailwind CSS"</span><span className="code-punct">,</span> <span className="code-string">"Python"</span><span className="code-punct">,</span> <span className="code-string">"FastAPI"</span></span>
+                <span className="code-line code-indent"><span className="code-punct">],</span></span>
+                <span className="code-line code-indent"><span className="code-fn">projects</span><span className="code-punct">:</span> <span className="code-num">3</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">passion</span><span className="code-punct">:</span> <span className="code-string">"Building intelligent platforms"</span><span className="code-punct">,</span></span>
                 <span className="code-line code-indent"><span className="code-fn">openToWork</span><span className="code-punct">:</span> <span className="code-keyword">true</span></span>
                 <span className="code-line"><span className="code-punct">{'}'};</span></span>
