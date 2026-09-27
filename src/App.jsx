@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [typingText, setTypingText] = useState('');
+  const [typingText, setTypingText] = useState('Frontend Developer & Generative AI Engineer');
   const [activeNav, setActiveNav] = useState('hero');
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
 
@@ -39,8 +39,8 @@ function App() {
     };
 
     const animateRing = () => {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
+      ringX += (mouseX - ringX) * 0.45;
+      ringY += (mouseY - ringY) * 0.45;
       if (cursorRingRef.current) {
         cursorRingRef.current.style.left = `${ringX}px`;
         cursorRingRef.current.style.top = `${ringY}px`;
@@ -48,7 +48,7 @@ function App() {
       rafId = requestAnimationFrame(animateRing);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     animateRing();
 
     // Hover detection for ring
@@ -150,7 +150,7 @@ function App() {
   // TYPING EFFECT
   // ═══════════════════════════════════
   useEffect(() => {
-    const roles = ['Frontend Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder', 'Gen AI Engineer', 'Frontend Developer'];
+    const roles = ['Frontend Developer & Generative AI Engineer', 'Frontend Developer', 'React & TypeScript Expert', 'API Architect', 'AI Platform Builder', 'Gen AI Engineer'];
     let roleIdx = 0, charIdx = 0, deleting = false;
     let timer;
 
@@ -429,29 +429,33 @@ function App() {
       {/* Noise Overlay */}
       <div className="noise-overlay"></div>
 
-      {/* Navbar */}
-      <nav id="navbar">
-        <a href="#hero" className="nav-logo">KNK</a>
-        <ul className="nav-links">
-          <li><a href="#hero" className={activeNav === 'hero' ? 'active' : ''}>Home</a></li>
-          <li><a href="#about" className={activeNav === 'about' ? 'active' : ''}>About</a></li>
-          <li><a href="#skills" className={activeNav === 'skills' ? 'active' : ''}>Skills</a></li>
-          <li><a href="#projects" className={activeNav === 'projects' ? 'active' : ''}>Projects</a></li>
-          <li><a href="#experience" className={activeNav === 'experience' ? 'active' : ''}>Experience</a></li>
-          <li><a href="#contact-wrap" className={activeNav === 'contact-wrap' ? 'active' : ''}>Contact</a></li>
-        </ul>
-        <button
-          className={`hamburger ${isMenuOpen ? 'open' : ''}`}
-          id="hamburger"
-          aria-label="Menu"
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-            document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
-          }}
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
+      {/* Header & Navbar */}
+      <header>
+        <nav id="navbar" aria-label="Main Navigation">
+          <a href="#hero" className="nav-logo">KNK</a>
+          <ul className="nav-links">
+            <li><a href="#hero" className={activeNav === 'hero' ? 'active' : ''}>Home</a></li>
+            <li><a href="#about" className={activeNav === 'about' ? 'active' : ''}>About</a></li>
+            <li><a href="#skills" className={activeNav === 'skills' ? 'active' : ''}>Skills</a></li>
+            <li><a href="#projects" className={activeNav === 'projects' ? 'active' : ''}>Projects</a></li>
+            <li><a href="#experience" className={activeNav === 'experience' ? 'active' : ''}>Experience</a></li>
+            <li><a href="#contact-wrap" className={activeNav === 'contact-wrap' ? 'active' : ''}>Contact</a></li>
+          </ul>
+          <button
+            className={`hamburger ${isMenuOpen ? 'open' : ''}`}
+            id="hamburger"
+            aria-label="Toggle Menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
+            }}
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </header>
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} id="mobile-menu">
@@ -470,8 +474,10 @@ function App() {
         ))}
       </div>
 
-      {/* HERO SECTION */}
-      <section id="hero">
+      {/* MAIN CONTENT */}
+      <main>
+        {/* HERO SECTION */}
+        <section id="hero">
         <canvas id="particles-canvas" ref={canvasRef}></canvas>
         <div className="hero-grid-overlay"></div>
         <div className="hero-glow hero-glow-1"></div>
@@ -500,10 +506,10 @@ function App() {
               </a>
             </div>
             <div className="hero-socials">
-              <a href="https://github.com/" className="social-link magnetic" target="_blank" title="GitHub">
+              <a href="https://github.com/narendrakumarkotipalli-web" className="social-link magnetic" target="_blank" rel="noopener noreferrer" title="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></svg>
               </a>
-              <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="social-link magnetic" target="_blank" title="LinkedIn">
+              <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="social-link magnetic" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
               </a>
               <a href="mailto:narendrakumarkotipalli@gmail.com" className="social-link magnetic" title="Email">
@@ -545,7 +551,7 @@ function App() {
 
       {/* ABOUT SECTION */}
       <div className="section-divider"></div>
-      <section id="about">
+      <section id="about" aria-labelledby="about-title">
         <div className="about-grid">
           <div className="about-visual reveal-left">
             <div className="about-avatar-wrap">
@@ -559,7 +565,7 @@ function App() {
           </div>
           <div className="about-text reveal-right">
             <div className="section-tag">About Me</div>
-            <h2 className="section-title">From Mechanical Gears to <span>Digital Products</span></h2>
+            <h2 id="about-title" className="section-title">From Mechanical Gears to <span>Digital Products</span></h2>
             <p>Started as a Mechanical Engineering graduate, I discovered a passion for building things that live on screens — and never looked back. Through relentless self-study and real-world projects, I transitioned into a <strong>GenAI Engineer at FISClouds Pvt. Ltd.</strong></p>
             <p>Today, I architect enterprise-grade platforms that merge beautiful React frontends with powerful FastAPI backends — and increasingly, AI systems that automate and augment human workflows. I thrive at the intersection of <strong>performance, design, and intelligence</strong>.</p>
             <div className="stats-grid">
@@ -586,10 +592,10 @@ function App() {
 
       {/* SKILLS SECTION */}
       <div className="section-divider"></div>
-      <div id="skills">
+      <section id="skills" aria-labelledby="skills-heading">
         <div className="skills-section-wrap">
           <div className="section-tag reveal">Tech Arsenal</div>
-          <h2 className="section-title reveal delay-1">Tools I <span>Wield Daily</span></h2>
+          <h2 id="skills-heading" className="section-title reveal delay-1">Tools I <span>Wield Daily</span></h2>
           <br />
           <div className="skills-categories">
             {[
@@ -648,13 +654,13 @@ function App() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* PROJECTS SECTION */}
       <div className="section-divider"></div>
-      <section id="projects">
+      <section id="projects" aria-labelledby="projects-title">
         <div className="section-tag reveal">Featured Work</div>
-        <h2 className="section-title reveal delay-1">Products I've <span>Shipped</span></h2>
+        <h2 id="projects-title" className="section-title reveal delay-1">Products I've <span>Shipped</span></h2>
         <br /><br />
         <div className="projects-stack">
           {/* Project 1: Gurita AI */}
@@ -684,7 +690,7 @@ function App() {
               </div>
             </div>
             <div className="project-visual">
-              <img src="/gurita_ai.png" alt="Gurita AI Dashboard" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+              <img src="/gurita_ai.webp" alt="Gurita AI - Agent Automation & AI Workflow Platform Dashboard by Narendra Kumar Kotipalli" loading="lazy" decoding="async" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
             </div>
           </div>
 
@@ -713,7 +719,7 @@ function App() {
               </div>
             </div>
             <div className="project-visual">
-              <img src="/curie.png" alt="Curie AI Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+              <img src="/curie.webp" alt="Curie - AI-Powered Research Platform Dashboard by Narendra Kumar Kotipalli" loading="lazy" decoding="async" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
             </div>
           </div>
 
@@ -742,7 +748,7 @@ function App() {
               </div>
             </div>
             <div className="project-visual">
-              <img src="/rpa.png" alt="RPA Automation Platform" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+              <img src="/rpa.webp" alt="RPA Web Automation Platform Dashboard by Narendra Kumar Kotipalli" loading="lazy" decoding="async" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
             </div>
           </div>
         </div>
@@ -750,9 +756,9 @@ function App() {
 
       {/* EXPERIENCE SECTION */}
       <div className="section-divider"></div>
-      <section id="experience">
+      <section id="experience" aria-labelledby="experience-title">
         <div className="section-tag reveal">Career Path</div>
-        <h2 className="section-title reveal delay-1">Work <span>Experience</span></h2>
+        <h2 id="experience-title" className="section-title reveal delay-1">Work <span>Experience</span></h2>
         <br /><br />
         <div className="timeline-container">
           <div className="timeline-line" id="timeline-line" ref={timelineLineRef}></div>
@@ -794,9 +800,9 @@ function App() {
 
       {/* EDUCATION SECTION */}
       <div className="section-divider"></div>
-      <section id="education">
+      <section id="education" aria-labelledby="education-title">
         <div className="section-tag reveal">Academic Background</div>
-        <h2 className="section-title reveal delay-1">Education</h2>
+        <h2 id="education-title" className="section-title reveal delay-1">Education</h2>
         <br /><br />
         <div className="edu-card reveal delay-2">
           <div className="edu-icon">
@@ -817,11 +823,11 @@ function App() {
       {/* CONTACT SECTION */}
       <div className="section-divider"></div>
       <div id="contact-wrap">
-        <section>
+        <section id="contact" aria-labelledby="contact-title">
           <div className="contact-grid">
             <div className="reveal-left">
               <div className="section-tag">Get In Touch</div>
-              <h2 className="contact-heading">Let's Build<br /><span>Something Great</span></h2>
+              <h2 id="contact-title" className="contact-heading">Let's Build<br /><span>Something Great</span></h2>
               <p className="contact-sub">I'm always excited to work on ambitious projects. Whether you have a product idea, a challenge to solve, or just want to chat — my inbox is open.</p>
               <div className="contact-details">
                 <a href="mailto:narendrakumarkotipalli@gmail.com" className="contact-item">
@@ -842,7 +848,16 @@ function App() {
                     <div className="contact-item-val">+91 7702925319</div>
                   </div>
                 </div>
-                <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="contact-item" target="_blank">
+                <a href="https://github.com/narendrakumarkotipalli-web" className="contact-item" target="_blank" rel="noopener noreferrer">
+                  <div className="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></svg>
+                  </div>
+                  <div>
+                    <div className="contact-item-label">GitHub</div>
+                    <div className="contact-item-val">github.com/narendrakumarkotipalli-web</div>
+                  </div>
+                </a>
+                <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="contact-item" target="_blank" rel="noopener noreferrer">
                   <div className="contact-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
                   </div>
@@ -856,16 +871,16 @@ function App() {
             <div className="reveal-right delay-2">
               <div className="contact-form" id="contact-form">
                 <div className="form-group">
-                  <label>Your Name <span style={{ color: '#f43f5e' }}>*</span></label>
-                  <input type="text" placeholder="John Doe" id="f-name" required />
+                  <label htmlFor="f-name">Your Name <span style={{ color: '#f43f5e' }}>*</span></label>
+                  <input type="text" placeholder="John Doe" id="f-name" name="name" required />
                 </div>
                 <div className="form-group">
-                  <label>Email Address <span style={{ color: '#f43f5e' }}>*</span></label>
-                  <input type="email" placeholder="john@company.com" id="f-email" required />
+                  <label htmlFor="f-email">Email Address <span style={{ color: '#f43f5e' }}>*</span></label>
+                  <input type="email" placeholder="john@company.com" id="f-email" name="email" required />
                 </div>
                 <div className="form-group">
-                  <label>Message <span style={{ color: '#f43f5e' }}>*</span></label>
-                  <textarea placeholder="Tell me about your project..." id="f-msg" required></textarea>
+                  <label htmlFor="f-msg">Message <span style={{ color: '#f43f5e' }}>*</span></label>
+                  <textarea placeholder="Tell me about your project..." id="f-msg" name="message" required></textarea>
                 </div>
                 <button
                   className="btn-send magnetic"
@@ -882,18 +897,22 @@ function App() {
         </section>
       </div>
 
+      </main>
+
       {/* Footer */}
       <footer>
         <div className="footer-socials">
-
-          <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="footer-social" target="_blank" title="LinkedIn">
+          <a href="https://github.com/narendrakumarkotipalli-web" className="footer-social" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></svg>
+          </a>
+          <a href="https://linkedin.com/in/narendra-kumar-kotipalli" className="footer-social" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
           </a>
           <a href="mailto:narendrakumarkotipalli@gmail.com" className="footer-social" title="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
           </a>
         </div>
-        <div className="footer-copy">© 2025 <span>Narendra Kumar Kotipalli</span> · Built with passion & precision</div>
+        <div className="footer-copy">© 2025 <span>Narendra Kumar Kotipalli</span> · Built with passion &amp; precision</div>
       </footer>
 
       {/* Scroll to top */}
